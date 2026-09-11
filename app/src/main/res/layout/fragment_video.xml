@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/app_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- ============================= -->
+        <!-- TÍTULO -->
+        <!-- ============================= -->
+
+        <TextView
+            android:id="@+id/txtTituloVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎬 Video turístico"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descubre Colombia a través de contenido audiovisual."
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="14dp" />
+
+
+        <!-- ============================= -->
+        <!-- REPRODUCTOR -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_video_player"
+            android:elevation="3dp"
+            android:padding="10dp">
+
+            <!-- VIDEO + BOTÓN PLAY CENTRAL -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="#0B1220">
+
+                <VideoView
+                    android:id="@+id/videoColombia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!-- PLAY CENTRAL -->
+
+                <TextView
+                    android:id="@+id/btnPlayCentral"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/bg_play_circle"
+                    android:text="▶"
+                    android:textColor="@android:color/white"
+                    android:textSize="27sp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:elevation="6dp" />
+
+            </FrameLayout>
+
+
+            <!-- NOMBRE DEL VIDEO -->
+
+            <TextView
+                android:id="@+id/txtEstadoVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎥 Recorrido turístico por Colombia"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp" />
+
+
+            <!-- BARRA DE PROGRESO -->
+
+            <SeekBar
+                android:id="@+id/seekVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:progressTint="@color/app_primary"
+                android:progressBackgroundTint="#475467"
+                android:thumbTint="@color/app_primary" />
+
+
+            <!-- TIEMPOS -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtTiempoActual"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="00:00"
+                    android:textColor="#D0D5DD"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txtDuracionVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textColor="#D0D5DD"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+            <!-- CONTROLES -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
+
+                <Button
+                    android:id="@+id/btnRetroceder"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="↶ 10 s"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"
+                    android:minHeight="0dp" />
+
+                <Space
+                    android:layout_width="6dp"
+                    android:layout_height="1dp" />
+
+                <Button
+                    android:id="@+id/btnPlayPause"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1.35"
+                    android:text="▶ Reproducir"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"
+                    android:minHeight="0dp" />
+
+                <Space
+                    android:layout_width="6dp"
+                    android:layout_height="1dp" />
+
+                <Button
+                    android:id="@+id/btnAdelantar"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="10 s ↷"
+                    android:textAllCaps="false"
+                    android:textSize="10sp"
+                    android:minHeight="0dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- DESCRIPCIÓN -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_video_info"
+            android:elevation="1dp"
+            android:padding="14dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌎 Sobre este recorrido"
+                android:textColor="@color/app_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conoce algunos de los paisajes, destinos, ciudades y atractivos turísticos más representativos de Colombia."
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginTop="7dp" />
+
+        </LinearLayout>
+
+
+        <!-- ============================= -->
+        <!-- TARJETAS INFERIORES -->
+        <!-- ============================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <!-- COLOMBIA -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="92dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🇨🇴"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Colombia"
+                    android:textColor="@color/text_primary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Turismo"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="9sp"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="1dp" />
+
+
+            <!-- MULTIMEDIA -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="92dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_card">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎥"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Multimedia"
+                    android:textColor="@color/text_primary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video turístico"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="9sp"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

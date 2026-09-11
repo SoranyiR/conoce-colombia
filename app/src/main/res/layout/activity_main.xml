@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_background"
+    android:fitsSystemWindows="true">
+
+
+    <!-- ===================================================== -->
+    <!-- ENCABEZADO GENERAL -->
+    <!-- ===================================================== -->
+
+    <LinearLayout
+        android:id="@+id/headerApp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/app_primary"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- BANDERA -->
+
+        <TextView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:gravity="center"
+            android:text="🇨🇴"
+            android:textSize="22sp" />
+
+
+        <!-- NOMBRE DE LA APP -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/txtHeaderTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Conoce Colombia"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtHeaderSubtitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Turismo • Cultura • Naturaleza"
+                android:textColor="#E8E3FF"
+                android:textSize="9sp"
+                android:layout_marginTop="1dp" />
+
+        </LinearLayout>
+
+
+        <!-- PEQUEÑO IDENTIFICADOR -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:gravity="center"
+            android:text="Explorar"
+            android:textColor="@android:color/white"
+            android:textSize="9sp"
+            android:background="@drawable/bg_header_badge"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+
+    </LinearLayout>
+
+
+    <!-- ===================================================== -->
+    <!-- CONTENIDO -->
+    <!-- ===================================================== -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <!-- MENÚ IZQUIERDO -->
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentMenu"
+            android:name="com.proyecto.conocecolombia.fragments.MenuFragment"
+            android:layout_width="86dp"
+            android:layout_height="match_parent"
+            android:background="#F1F4F8"
+            tools:layout="@layout/fragment_menu" />
+
+
+        <!-- LÍNEA DIVISORIA -->
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#E2E8F0" />
+
+
+        <!-- CONTENIDO DERECHO -->
+
+        <FrameLayout
+            android:id="@+id/contenedorContenido"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/app_background" />
+
+    </LinearLayout>
+
+</LinearLayout>

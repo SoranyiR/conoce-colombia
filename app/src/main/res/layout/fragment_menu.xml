@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:background="#F1F4F8"
+    android:paddingStart="7dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="7dp">
+
+
+    <!--
+        Conservamos este ID porque ya existía.
+        Lo ocultamos visualmente para no romper Java.
+    -->
+
+    <TextView
+        android:id="@+id/txtTituloMenu"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:text="COLOMBIA" />
+
+
+    <!-- PERFIL -->
+
+    <Button
+        android:id="@+id/btnPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:text="👤 Perfil"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/bg_menu_button"
+        android:backgroundTint="@null"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="2dp" />
+
+
+    <!-- FOTOS -->
+
+    <Button
+        android:id="@+id/btnFotos"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:text="📷 Fotos"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/bg_menu_button"
+        android:backgroundTint="@null"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="2dp" />
+
+
+    <!-- VIDEO -->
+
+    <Button
+        android:id="@+id/btnVideo"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:text="🎬 Video"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/bg_menu_button"
+        android:backgroundTint="@null"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="2dp" />
+
+
+    <!-- WEB -->
+
+    <Button
+        android:id="@+id/btnWeb"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:text="🌐 Web"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/bg_menu_button"
+        android:backgroundTint="@null"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="2dp" />
+
+
+    <!-- BOTONES -->
+
+    <Button
+        android:id="@+id/btnBotones"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:text="⚙️ Acciones"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="9sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@drawable/bg_menu_button"
+        android:backgroundTint="@null"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="2dp" />
+
+
+    <!-- ESPACIO -->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <!-- MARCA INFERIOR -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🇨🇴"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:paddingBottom="14dp" />
+
+</LinearLayout>

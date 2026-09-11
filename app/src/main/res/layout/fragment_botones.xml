@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/app_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+
+        <!-- =========================================== -->
+        <!-- TÍTULO -->
+        <!-- =========================================== -->
+
+        <TextView
+            android:id="@+id/txtTituloBotones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚙️ Acciones del viajero"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Interactúa con tu recorrido por Colombia."
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="14dp" />
+
+
+        <!-- =========================================== -->
+        <!-- DESTINO ACTUAL -->
+        <!-- =========================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_profile_hero"
+            android:elevation="2dp"
+            android:padding="14dp">
+
+            <!-- ICONO -->
+
+            <TextView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:gravity="center"
+                android:text="📍"
+                android:textSize="30sp"
+                android:background="@drawable/bg_play_circle" />
+
+
+            <!-- INFORMACIÓN -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DESTINO ACTUAL"
+                    android:textColor="@color/app_primary"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDestinoActual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cartagena"
+                    android:textColor="@color/text_primary"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descubre un destino colombiano"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="10sp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- =========================================== -->
+        <!-- TÍTULO ACCIONES -->
+        <!-- =========================================== -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acciones rápidas"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="9dp" />
+
+
+        <!-- =========================================== -->
+        <!-- CAMBIAR DESTINO -->
+        <!-- =========================================== -->
+
+        <Button
+            android:id="@+id/btnCambiarDestino"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:text="🗺️   Cambiar destino"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button_orange"
+            android:backgroundTint="@null"
+            android:minHeight="0dp"
+            android:minWidth="0dp" />
+
+
+        <!-- =========================================== -->
+        <!-- MOSTRAR MENSAJE -->
+        <!-- =========================================== -->
+
+        <Button
+            android:id="@+id/btnMostrarMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:text="💬   Mostrar mensaje"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button_green"
+            android:backgroundTint="@null"
+            android:minHeight="0dp"
+            android:minWidth="0dp" />
+
+
+        <!-- =========================================== -->
+        <!-- REGISTRAR VISITA -->
+        <!-- =========================================== -->
+
+        <Button
+            android:id="@+id/btnSumarVisita"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:text="➕   Registrar visita"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button_blue"
+            android:backgroundTint="@null"
+            android:minHeight="0dp"
+            android:minWidth="0dp" />
+
+
+        <!-- =========================================== -->
+        <!-- REINICIAR -->
+        <!-- =========================================== -->
+
+        <Button
+            android:id="@+id/btnReiniciarContador"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="10dp"
+            android:text="↻   Reiniciar contador"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button_outline"
+            android:backgroundTint="@null"
+            android:minHeight="0dp"
+            android:minWidth="0dp" />
+
+
+        <!-- =========================================== -->
+        <!-- CONTADOR COMPACTO -->
+        <!-- =========================================== -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bg_card"
+            android:elevation="1dp"
+            android:layout_marginTop="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👣"
+                android:textSize="24sp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/txtVisitas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visitas: 0"
+                android:textColor="@color/app_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <!-- TEXTO FINAL -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cada visita representa un nuevo lugar descubierto 🇨🇴"
+            android:textColor="@color/text_secondary"
+            android:textSize="9sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>
